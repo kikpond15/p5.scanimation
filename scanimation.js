@@ -113,7 +113,7 @@ function extractNumber(filename) {
 function drawGuiText() {
   text("Slit Number : " + slit_frame_count.value(), slit_frame_count.position().x, slit_frame_count.position().y - 5);
   text("Slit Width : " + slit_width.value(), slit_width.position().x, slit_width.position().y - 5);
-  text("Image Width : " + imageSize.value(), imageSize.position().x, imageSize.position().y - 5);
+  text("Image Size : " + imageSize.value(), imageSize.position().x, imageSize.position().y - 5);
 }
 
 function showOrHideSlide() {

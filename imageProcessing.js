@@ -1,6 +1,14 @@
 function processImage(sourceImg, size) {
-    let h = sourceImg.width*size / sourceImg.height;
-    sourceImg.resize(size, h);
+    let w, h;
+    if(sourceImg.width >= sourceImg.height){
+        h = sourceImg.height*size/sourceImg.width;
+        w = size;
+    } else {
+        h = size;
+        w = sourceImg.width*size/sourceImg.height;
+    }
+
+    sourceImg.resize(w, h);
     sourceImg.loadPixels();
     for (let y = 0; y < sourceImg.height; y++) {
         for (let x = 0; x < sourceImg.width; x++) {
